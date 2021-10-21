@@ -135,28 +135,76 @@
                 <label for="s">S</label>
                 <input type="radio" name="size" id="s" value="s">
                 <label for="m">M</label>
-                <input type="radio" name="size" id="m" v alue="m">
+                <input type="radio" name="size" id="m" value="m">
             </p>
-            <label for="meal">Please Select an Entree:</label>
-            <select name="meal" id="meal">
-                <option value="Fish">Fish</option>
-                <option value="veg" selected>Vegetarian</option>
-                <option value="steak">Steak</option>
-            </select>
+        </form>
+        <label for="meal">Please Select an Entree:</label>
+        <select name="meal" id="meal">
+            <option value="Fish">Fish</option>
+            <option value="veg" selected>Vegetarian</option>
+            <option value="steak">Steak</option>
+        </select>
+        <p>
+            <label for="cheese">Amount of Cheese</label>
+            <input type="range" id="cheese" min="1" max="100" value="75" name="cheese_level">
+        </p>
+        <p>
+            <label for="requests">Any Special Requests?</label>
+            <br>
+            <textarea id="requests" rows="10" cols="40" name="Requests?" placeholder="Type something here"></textarea>
+        </p>
+        <button>Submit</button>
+        <h2>Validations Demo</h2>
+        <form action="/dummy">
+            <label for="first">Enter First Name</label>
+            <input type="text" name="first" id="first" required>
             <p>
-                <label for="cheese">Amount of Cheese</label>
-                <input type="range" id="cheese" min="1" max="100" value="75" name="cheese_level">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" minlength="5" maxlength="20" required>
             </p>
-            <p>
-                <label for="requests">Any Special Requests?</label>
-                <br>
-                <textarea id="requests" rows="10" cols="40" name="Requests?"
-                    placeholder="Type something here"></textarea>
-            </p>
+
             <button>Submit</button>
+        </form>
+        <hr>
+        <h2>Race Registration!</h2>
+        <form action="/races">
+            <div>
+                <label for="first">First Name</label>
+                <input type="text" name="firstname" id="first" required>
+                <label for="last">Last Name</label>
+                <input type="text" name="lastname" id="last" required>
+            </div>
+            <p>Select a Race:</p>
+            <div>
+                <input type="radio" name="races" id="funrun" value="funrun">
+                <label for="funrun">Fun Run 5K</label>
+            </div>
+            <div>
+                <input type="radio" name="races" id="halfmarathon" value="halfmarathon">
+                <label for="halfmarathon">Half Marathon</label>
+            </div>
+            <div>
+                <input type="radio" name="races" id="fullmarathon" value="fullmarathon">
+                <label for="fullmarathon">Full Marathon</label>
+            </div>
+            <div>
+                <label for="email"></label>Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
 
+            </div>
+            <div>
+                <label for="agegroup">Select Age Group</label>
+                <select name="agegroup" id="agegroup">
+                    <option value="undereighteen">under 18</option>
+                    <option value="thirty">18-30</option>
+                    <option value="fifty">30-50</option>
+                    <option value="plus">50+</option>
+                </select>
+            </div>
 
-
+            <button>Register!</button>
         </form>
 
 </body>
